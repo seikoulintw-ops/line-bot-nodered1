@@ -1,11 +1,16 @@
 {
   "name": "line-bot-nodered",
   "version": "1.0.0",
-  "description": "LINE bot with Node-RED on Render",
+  "description": "LINE Bot with Node-RED running on Render",
+  "main": "index.js",
   "scripts": {
     "start": "node-red -v --userDir /opt/render/project/src --settings ./settings.js ./flows.json"
-  }
+  },
   "dependencies": {
     "node-red": "^3.1.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "license": "MIT"
 }
