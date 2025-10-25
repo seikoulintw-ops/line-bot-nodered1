@@ -1,0 +1,11 @@
+{
+  "name": "line-bot-nodered",
+  "version": "1.0.0",
+  "description": "LINE bot with Node-RED on Render",
+  "scripts": {
+    "start": "node-red -v --settings ./settings.js flows.json"
+  },
+  "dependencies": {
+    "node-red": "^3.1.0"
+  }
+}
