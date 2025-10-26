@@ -446,7 +446,7 @@
         "type": "function",
         "z": "98134dc27988aaee",
         "name": "function 1",
-        "func": "global.set(\"gas_url\", \"https://script.google.com/macros/s/AKfycbx-ib2VNeKJSCWptnaaSzaAxDHzgZnUZNwM6Td-bJefkrcoq9RLbnBfxbgAd5Fs3sW9/exec\");\n\nnode.warn(\"✅ GAS URL 已設定完成\");\nreturn msg;",
+        "func": "global.set(\"gas_url\", \"https://script.google.com/macros/s/AKfycbx24sLy38OPSIH_08a2kFnO7NVkOZIyr-eM4rhmin4I3ZpL_o78u_-Sd1mCSGLQVpkI/exec\");\n\nnode.warn(\"✅ GAS URL 已設定完成\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
