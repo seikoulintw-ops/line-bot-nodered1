@@ -1,6 +1,6 @@
 module.exports = {
   // Render 會自動提供這個埠號（PORT）
-  uiPort: process.env.PORT || 1880,
+  uiPort: process.env.PORT,
 
   // 讓 http 節點（Webhook）可從外部連進來
   httpNodeRoot: "/",
