@@ -1,13 +1,5 @@
 [
     {
-        "id": "79c6c2f88a72a778",
-        "type": "tab",
-        "label": "流程1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "98134dc27988aaee",
         "type": "tab",
         "label": "LINE 訊息回覆",
@@ -19,8 +11,8 @@
         "id": "7869048476b3fc65",
         "type": "junction",
         "z": "98134dc27988aaee",
-        "x": 5420,
-        "y": 3140,
+        "x": 1320,
+        "y": 220,
         "wires": [
             []
         ]
@@ -33,10 +25,9 @@
         "url": "/line_hook",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 4280,
-        "y": 3320,
+        "x": 180,
+        "y": 400,
         "wires": [
             [
                 "bbb4dab0c25010e7"
@@ -56,8 +47,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4770,
-        "y": 3180,
+        "x": 670,
+        "y": 260,
         "wires": []
     },
     {
@@ -72,8 +63,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4720,
-        "y": 3460,
+        "x": 620,
+        "y": 540,
         "wires": [
             [
                 "77782297026a2d6c",
@@ -94,8 +85,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 5030,
-        "y": 3380,
+        "x": 930,
+        "y": 460,
         "wires": []
     },
     {
@@ -105,8 +96,8 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 4720,
-        "y": 3320,
+        "x": 620,
+        "y": 400,
         "wires": []
     },
     {
@@ -131,8 +122,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 5180,
-        "y": 3460,
+        "x": 1080,
+        "y": 540,
         "wires": [
             [
                 "791355f27b03e05c"
@@ -140,24 +131,6 @@
             [
                 "4ac82917d127596a"
             ]
-        ]
-    },
-    {
-        "id": "31b6ca2cac08425e",
-        "type": "function",
-        "z": "98134dc27988aaee",
-        "name": "設定回覆訊息-text",
-        "func": "msg.data.replyMsg = `可以告訴我你的身分證字號嗎？\\n我來查查看你有沒有報名過😉`\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 6750,
-        "y": 3800,
-        "wires": [
-            []
         ]
     },
     {
@@ -172,8 +145,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6280,
-        "y": 3540,
+        "x": 2180,
+        "y": 620,
         "wires": [
             [
                 "5b26e3031a116f92"
@@ -196,8 +169,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 6500,
-        "y": 3560,
+        "x": 2400,
+        "y": 640,
         "wires": [
             []
         ]
@@ -218,8 +191,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 5790,
-        "y": 3540,
+        "x": 1690,
+        "y": 620,
         "wires": [
             [
                 "12e43af8a9321f2a"
@@ -238,8 +211,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5550,
-        "y": 3540,
+        "x": 1450,
+        "y": 620,
         "wires": [
             [
                 "06a7a299ab6009bd"
@@ -258,39 +231,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6040,
-        "y": 3540,
+        "x": 1940,
+        "y": 620,
         "wires": [
             [
                 "47caebfdb8682256"
             ]
-        ]
-    },
-    {
-        "id": "61229fd57ea68a2f",
-        "type": "inject",
-        "z": "98134dc27988aaee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 4830,
-        "y": 3780,
-        "wires": [
-            []
         ]
     },
     {
@@ -305,8 +251,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5580,
-        "y": 3120,
+        "x": 1480,
+        "y": 200,
         "wires": [
             [
                 "84f57caedae871dd"
@@ -332,8 +278,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 5980,
-        "y": 3120,
+        "x": 1880,
+        "y": 200,
         "wires": [
             [
                 "ae6f7cf6751ae8a3"
@@ -352,8 +298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6320,
-        "y": 3100,
+        "x": 2220,
+        "y": 180,
         "wires": [
             [
                 "a902c61433ea3c11"
@@ -376,8 +322,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 7040,
-        "y": 3220,
+        "x": 2940,
+        "y": 300,
         "wires": [
             []
         ]
@@ -394,8 +340,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6860,
-        "y": 3480,
+        "x": 2760,
+        "y": 560,
         "wires": [
             [
                 "63895d0c82b07973"
@@ -414,8 +360,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5360,
-        "y": 3140,
+        "x": 1260,
+        "y": 220,
         "wires": [
             [
                 "2853d457b24c8c6d"
@@ -443,8 +389,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5570,
-        "y": 3420,
+        "x": 1470,
+        "y": 500,
         "wires": [
             [
                 "a902c61433ea3c11"
@@ -463,8 +409,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5590,
-        "y": 3060,
+        "x": 1490,
+        "y": 140,
         "wires": [
             [
                 "350853f23c5aaf27"
@@ -487,8 +433,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 5980,
-        "y": 3060,
+        "x": 1880,
+        "y": 140,
         "wires": [
             [
                 "47a050455ea3ba55"
@@ -507,8 +453,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4440,
-        "y": 3320,
+        "x": 340,
+        "y": 400,
         "wires": [
             [
                 "390c0602fa3e523e",
@@ -529,8 +475,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6330,
-        "y": 3040,
+        "x": 2230,
+        "y": 120,
         "wires": [
             [
                 "a902c61433ea3c11"
@@ -549,8 +495,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5750,
-        "y": 2960,
+        "x": 1650,
+        "y": 40,
         "wires": [
             [
                 "22dd36d8f1cf9211"
@@ -569,8 +515,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5600,
-        "y": 3200,
+        "x": 1500,
+        "y": 280,
         "wires": [
             [
                 "fc7159ad8c51317e",
@@ -590,8 +536,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 5640,
-        "y": 3280,
+        "x": 1540,
+        "y": 360,
         "wires": []
     },
     {
@@ -610,8 +556,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 6100,
-        "y": 3380,
+        "x": 2000,
+        "y": 460,
         "wires": [
             [
                 "1e67c898553d729e"
@@ -630,8 +576,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6330,
-        "y": 3400,
+        "x": 2230,
+        "y": 480,
         "wires": [
             [
                 "a902c61433ea3c11"
@@ -650,8 +596,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5870,
-        "y": 3280,
+        "x": 1770,
+        "y": 360,
         "wires": [
             [
                 "7f55db79473862ce"
