@@ -5,8 +5,6 @@ module.exports = {
   // Webhook 可從外部進入
   httpNodeRoot: "/",
 
-  // 健康檢查 (Render、UptimeRobot 可 ping)
-  httpStatic: "public",
 
   // 全域變數可在 Function 節點讀取
   functionGlobalContext: {
@@ -14,20 +12,4 @@ module.exports = {
     line_token: process.env.LINE_TOKEN,
   },
 
-  // 啟動時輸出健康訊息
-  onStart: function () {
-    console.log("✅ Node-RED 已啟動，伺服器健康正常！");
-  },
-
-  // 保留預設設定
-  adminAuth: null,
-  httpAdminRoot: "/admin",
-  flowFile: "flows.json",
-
-  // 關閉專案功能 (可加快啟動速度)
-  editorTheme: {
-    projects: {
-      enabled: false
-    }
-  }
 };
