@@ -588,7 +588,43 @@
         ]
     },
     {
-        "id": "912045780ce19d25",
+        "id": "init_starttime_inject",
+        "type": "inject",
+        "z": "98134dc27988aaee",
+        "name": "init uptime",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 220,
+        "y": 740,
+        "wires": [
+            [
+                "set_starttime_fn"
+            ]
+        ]
+    },
+    {
+        "id": "set_starttime_fn",
+        "type": "function",
+        "z": "98134dc27988aaee",
+        "name": "set startTime",
+        "func": "global.set('startTime', new Date().getTime());\nnode.log('🕒 startTime initialized');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "health_http_in",
         "type": "http in",
         "z": "98134dc27988aaee",
         "name": "健康檢查端點",
@@ -596,36 +632,35 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
-        "y": 820,
+        "x": 210,
+        "y": 880,
         "wires": [
             [
-                "42d9270f39d88c6d"
+                "health_fn"
             ]
         ]
     },
     {
-        "id": "42d9270f39d88c6d",
+        "id": "health_fn",
         "type": "function",
         "z": "98134dc27988aaee",
         "name": "function/health",
-        "func": "msg.payload = {\n  status: \"ok\",\n  uptime: process.uptime(),\n  time: new Date().toISOString()\n};\nreturn msg;",
+        "func": "const startTime = global.get('startTime') || new Date().getTime();\nconst uptime = ((new Date().getTime() - startTime) / 1000).toFixed(1);\n\nmsg.payload = {\n  status: 'ok',\n  uptime: uptime,\n  time: new Date().toISOString()\n};\nreturn msg;",
         "outputs": 1,
-        "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 820,
+        "x": 440,
+        "y": 880,
         "wires": [
             [
-                "0caa28b31c96f7f9"
+                "health_http_response"
             ]
         ]
     },
     {
-        "id": "0caa28b31c96f7f9",
+        "id": "health_http_response",
         "type": "http response",
         "z": "98134dc27988aaee",
         "name": "回傳 200 OK",
@@ -633,8 +668,8 @@
         "headers": {
             "Content-Type": "application/json"
         },
-        "x": 660,
-        "y": 820,
+        "x": 630,
+        "y": 880,
         "wires": []
     }
 ]
