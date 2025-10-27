@@ -636,8 +636,7 @@
         "y": 880,
         "wires": [
             [
-                "health_fn",
-                "a31633ea16abd3e5"
+                "health_fn"
             ]
         ]
     },
@@ -656,7 +655,8 @@
         "y": 880,
         "wires": [
             [
-                "health_http_response"
+                "health_http_response",
+                "a31633ea16abd3e5"
             ]
         ]
     },
@@ -685,7 +685,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 640,
         "y": 940,
         "wires": []
     }
